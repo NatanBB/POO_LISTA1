@@ -39,12 +39,29 @@ public class testes {
 		System.out.println("-------------------------");
 		// separacao_teste
 		
+		
 		// teste_tv
 		TV tv = new TV((int)5, (int)25);
 		tv.mostraCanal();
 		tv.mostraVolume();
 		tv.trocaCanal(90);
 		tv.trocaVolume(10);
+		
+		// separacao_teste
+		System.out.println("-------------------------");
+		// separacao_teste
+		
+		// teste_bichinho_incompleto
+		Bichinho bichinho = new Bichinho("Cleyton", "sem fome", "boa" , 5);
+		bichinho.mostraNome();
+		bichinho.mostraIdade();
+		bichinho.mostraSaude();
+		bichinho.mostraFome();
+		bichinho.trocaNome("Peres");
+		bichinho.trocaIdade(6);
+		bichinho.trocaFome("com fome");
+		bichinho.trocaSaude("ruim");
+		
 	}
 
 }
