@@ -5,9 +5,9 @@ public class testes {
 	public static void main(String[] args) {
 		// teste_bola
 		Bola bolinha = new Bola("verde", (double)5.2, "borracha");
-		System.out.println("A cor da bola √©: " +bolinha.mostraCor());
+		System.out.println("A cor da bola È: " +bolinha.mostraCor());
 		bolinha.trocaCor("vermelho");
-		System.out.println("A nova cor da bola √©: " + bolinha.mostraCor());
+		System.out.println("A nova cor da bola È: " + bolinha.mostraCor());
 		
 		// separacao_teste
 		System.out.println("-------------------------");
@@ -15,9 +15,9 @@ public class testes {
 		
 		// teste_quadrado
 		Quadrado quadradinho = new Quadrado(6);
-		System.out.println("O tamanho do lado √©: " + quadradinho.retornaLado());
-		System.out.println("√Årea total: " + quadradinho.Area());
-		System.out.println("O novo tamanho do lado √©: " + quadradinho.mudaLado(8));
+		System.out.println("O tamanho do lado È: " + quadradinho.retornaLado());
+		System.out.println("¡rea total: " + quadradinho.Area());
+		System.out.println("O novo tamanho do lado È: " + quadradinho.mudaLado(8));
 		
 		// separacao_teste
 		System.out.println("-------------------------");
@@ -25,43 +25,59 @@ public class testes {
 		
 		// teste_pessoa
 		Pessoa pessoa = new Pessoa("Natan", (int)18, (double)70, (double)1.70);
-		System.out.println("A idade de " + pessoa.getNome() + " √© " + pessoa.getIdade());
+		System.out.println("A idade de " + pessoa.getNome() + " È " + pessoa.getIdade());
 		pessoa.envelhecer();
-		System.out.println("A idade de " + pessoa.getNome() + " depois de um ano √© " + pessoa.getIdade());
-		System.out.println("O peso de " + pessoa.getNome() +" √© " + pessoa.getPeso() + "kg");
+		System.out.println("A idade de " + pessoa.getNome() + " depois de um ano È " + pessoa.getIdade());
+		System.out.println("O peso de " + pessoa.getNome() +" È " + pessoa.getPeso() + "kg");
 		pessoa.engordar();
 		System.out.println("O peso de " + pessoa.getNome() +" foi para " + pessoa.getPeso()  + "kg porque comeu demais!");
 		pessoa.emagrecer();
-		System.out.println("O peso de " + pessoa.getNome() +" depois fazer exerc√≠cios f√≠sicos √© " + pessoa.getPeso()  + "kg");
-		System.out.println("A altura de " + pessoa.getNome() + " √© " + pessoa.getAltura() + " metros");
+		System.out.println("O peso de " + pessoa.getNome() +" depois fazer exercÌcios fÌsicos È " + pessoa.getPeso()  + "kg");
+		System.out.println("A altura de " + pessoa.getNome() + " È " + pessoa.getAltura() + " metros");
 		
 		// separacao_teste
 		System.out.println("-------------------------");
 		// separacao_teste
-		
 		
 		// teste_tv
 		TV tv = new TV((int)5, (int)25);
 		tv.mostraCanal();
 		tv.mostraVolume();
 		tv.trocaCanal(90);
+		tv.trocaCanal(45);
 		tv.trocaVolume(10);
 		
 		// separacao_teste
 		System.out.println("-------------------------");
 		// separacao_teste
 		
-		// teste_bichinho_incompleto
-		Bichinho bichinho = new Bichinho("Cleyton", "sem fome", "boa" , 5);
+		// teste_bichinho
+		Bichinho bichinho = new Bichinho("Cleyton", true, false , 5); // nome_fome_saude_idade
 		bichinho.mostraNome();
 		bichinho.mostraIdade();
 		bichinho.mostraSaude();
 		bichinho.mostraFome();
-		bichinho.trocaNome("Peres");
+		bichinho.humorBichinho();
+		bichinho.trocaNome("Natan");
 		bichinho.trocaIdade(6);
-		bichinho.trocaFome("com fome");
-		bichinho.trocaSaude("ruim");
+		bichinho.trocaFome(false);
+		bichinho.trocaSaude(true);
+		bichinho.humorBichinho();
 		
+		// separacao_teste
+		System.out.println("-------------------------");
+		// separacao_teste
+		
+		// teste_bombaCombustivel
+		
+		BombaComb Bomba = new BombaComb("Diesel", 4, 85, 500);
+		Bomba.mostraQuantidade();
+		Bomba.abastecerPorValor(50);
+		Bomba.abastecerPorLitro(50);
+		Bomba.alterarValor(5);
+		Bomba.alterarCombustivel("Gasolina");
+		Bomba.abastecerPorValor(50);
+		Bomba.alteraQuantidadeCombustivel(); // funcao_automatica
 	}
 
 }

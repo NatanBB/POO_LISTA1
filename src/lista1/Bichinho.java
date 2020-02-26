@@ -2,12 +2,12 @@ package lista1;
 
 public class Bichinho {
 	private String nome;
-	private String fome;
-	private String saude;
+	private boolean fome;
+	private boolean saude;
 	private int idade;
 
 	
-	public Bichinho(String nome, String fome, String saude, int idade) {
+	public Bichinho(String nome, boolean fome, boolean saude, int idade) {
 		this.nome = nome;
 		this.fome = fome;
 		this.saude = saude;
@@ -23,11 +23,35 @@ public class Bichinho {
 	}
 	
 	public void mostraSaude() {
-		System.out.println("A saude do seu bichinho está: " + this.saude);
+		if (this.saude == true) {
+			System.out.println("A saude do seu bichinho está: boa");
+		} else {
+			System.out.println("A saude do seu bichinho está: ruim");
+		}
+		
 	}
 	
 	public void mostraFome() {
-		System.out.println("Seu bichinho esta: " + this.fome);
+		if (this.fome == true) {
+			System.out.println("Seu bichinho esta com fome");
+		} else {
+			System.out.println("Seu bichinho nao esta com fome");
+		}
+		
+	}
+	
+	public String humorBichinho() {
+		String humor = " ";
+		
+		if (this.saude == false && this.fome == true) {
+			humor = "Triste e com fome";
+		} else if (this.saude == true && this.fome == false) {
+			humor = "Feliz de bucho cheio";
+		} else {
+			humor = "Normal";
+		}
+		System.out.println("O humor do seu bichinho é: " + humor);
+		return humor;
 	}
 	
 	public void trocaNome(String novo_nome) {
@@ -40,14 +64,14 @@ public class Bichinho {
 		System.out.println("A idade do seu bichinho agora é: " + this.idade);
 	}
 	
-	public void trocaSaude(String nova_saude) {
-		this.saude = nova_saude;
-		System.out.println("A saude do seu bichinho esta: " + this.saude);
+	public void trocaSaude(boolean saude) {
+		this.saude = saude;
+		mostraSaude();
 	}
 	
-	public void trocaFome(String nova_fome) {
-		this.fome = nova_fome;
-		System.out.println("Seu bichinho esta: " + this.fome);
+	public void trocaFome(boolean fome) {
+		this.fome = fome;
+		mostraFome();
 	}
 	
 	//fazer_humor
