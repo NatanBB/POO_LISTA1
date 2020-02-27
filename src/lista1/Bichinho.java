@@ -15,18 +15,18 @@ public class Bichinho {
 	}
 	
 	public void mostraNome() {
-		System.out.println("O nome do seu bichinho È: " + this.nome);
+		System.out.println("O nome do seu bichinho √©: " + this.nome);
 	}
 	
 	public void mostraIdade() {
-		System.out.println("A idade do seu bichinho È: " + this.idade);
+		System.out.println("A idade do seu bichinho √©: " + this.idade);
 	}
 	
 	public void mostraSaude() {
 		if (this.saude == true) {
-			System.out.println("A saude do seu bichinho est·: boa");
+			System.out.println("A saude do seu bichinho est√°: boa");
 		} else {
-			System.out.println("A saude do seu bichinho est·: ruim");
+			System.out.println("A saude do seu bichinho est√°: ruim");
 		}
 		
 	}
@@ -50,18 +50,18 @@ public class Bichinho {
 		} else {
 			humor = "Normal";
 		}
-		System.out.println("O humor do seu bichinho È: " + humor);
+		System.out.println("O humor do seu bichinho √©: " + humor);
 		return humor;
 	}
 	
 	public void trocaNome(String novo_nome) {
 		this.nome = novo_nome;
-		System.out.println("O novo nome do seu bichinho È: " + this.nome);
+		System.out.println("O novo nome do seu bichinho √©: " + this.nome);
 	}
 	
 	public void trocaIdade(int nova_idade) {
 		this.idade = nova_idade;
-		System.out.println("A idade do seu bichinho agora È: " + this.idade);
+		System.out.println("A idade do seu bichinho agora √©: " + this.idade);
 	}
 	
 	public void trocaSaude(boolean saude) {
@@ -74,5 +74,4 @@ public class Bichinho {
 		mostraFome();
 	}
 	
-	//fazer_humor
 }
